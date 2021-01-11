@@ -51,6 +51,9 @@ namespace SteamAuth
         [JsonProperty("fully_enrolled")]
         public bool FullyEnrolled { get; set; }
 
+        [JsonIgnore]
+        public string AuthCode { get; set; }
+
         public SessionData Session { get; set; }
 
         private static byte[] steamGuardCodeTranslations = new byte[] { 50, 51, 52, 53, 54, 55, 56, 57, 66, 67, 68, 70, 71, 72, 74, 75, 77, 78, 80, 81, 82, 84, 86, 87, 88, 89 };
